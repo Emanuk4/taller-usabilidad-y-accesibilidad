@@ -1,0 +1,410 @@
+/* General Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f9f9;
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: url('imagenes/fondoDePagina.webp');
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen en la página */
+}
+
+/* Mejora de la accesibilidad y legibilidad en enlaces */
+a {
+    color: #0056b3;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+/* Navegación mediante teclado */
+a:focus {
+    outline: 3px dashed #ff5733;
+    outline-offset: 4px;
+}
+
+/* Main Header Style */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('imagenes/banner-image.jpg') center/cover no-repeat;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    padding: 10px 20px; /* Espaciado alrededor del texto */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Mejora de la accesibilidad de los títulos */
+h2 {
+    font-size: 2rem;
+    color: #0056b3;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* General Section Style */
+section {
+    padding: 60px 0;
+}
+
+/* Featured Products Section */
+.featured-products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-card p {
+    color: #666;
+}
+
+.product-card .price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0056b3;
+}
+
+/* Mejora de botones CTA */
+.cta {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover, .cta:focus {
+    background-color: #e74c3c;
+    outline: none;
+}
+
+.cta:focus {
+    outline: 3px dashed #ff5733;
+    outline-offset: 5px;
+}
+
+/* Testimonial Section */
+blockquote {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    font-style: italic;
+    text-align: center;
+    color: #555;
+}
+
+blockquote p {
+    margin-bottom: 0;
+}
+
+/* Footer Section */
+footer {
+    background-color: #ff7676;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer h2 {
+    color: white;
+}
+
+footer p {
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .featured-products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+
+    .contacto-formulario {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacto-formulario form, .contacto-info {
+        width: 100%;
+    }
+}
+
+/* Contacto - Mejora de accesibilidad en formulario */
+.contacto-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-titulo {
+    font-size: 2rem;
+    color: #0056b3;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contacto-formulario {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.contacto-formulario form {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-formulario input, .contacto-formulario textarea {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contacto-formulario input:focus, .contacto-formulario textarea:focus {
+    outline: 3px dashed #0056b3;
+    outline-offset: 3px;
+}
+
+.contacto-formulario button {
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contacto-formulario button:hover, .contacto-formulario button:focus {
+    background-color: #0056b3;
+}
+
+.contacto-info {
+    width: 30%;
+}
+
+.contacto-info p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Mejora en el mapa */
+.contacto-map-container {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 50px;
+}
+
+.contacto-map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer y Redes Sociales */
+.contacto-footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.contacto-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contacto-social-icons a img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Estilo del mapa mejorado */
+.map-container {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin-top: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.plan {
+    display: inline-block;
+    width: 30%;
+    padding: 2em;
+    margin: 1em;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.plan h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.plan p {
+    font-size: 1.2em;
+}
+
+.plan strong {
+    display: block;
+    font-size: 2.2em;
+    margin-bottom: 1em;
+}
+a:focus,
+button:focus {
+    outline: 3px solid #ff5733;
+    outline-offset: 3px;
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('banner-image.jpg') center/cover no-repeat;
+}
+
+body {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Estilo personalizado para asegurar la legibilidad del texto */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('imagenes/banner-image.jpg') center/cover no-repeat;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.section-with-image {
+    position: relative;
+    background: url('imagenes/background-image.jpg') center/cover no-repeat;
+    padding: 60px 0;
+}
+
+.section-with-image h2, .section-with-image p {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.product-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 30px;
+}

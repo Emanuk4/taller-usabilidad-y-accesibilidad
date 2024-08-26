@@ -1,0 +1,368 @@
+/* General Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    background-image: url('imagenes/fondoDePagina.webp');
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen en la página */
+}
+
+/* Asegurar un alto contraste para mejor accesibilidad */
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mejora de la estructura del encabezado */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('imagenes/banner-image.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            display: inline-block;
+            border-radius: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+nav a {
+    color: #fff;
+    font-size: 1.1em;
+    padding: 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Secciones y contenido */
+section {
+    padding: 3em 0;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Accesibilidad y contraste en los títulos */
+h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+    color: #555;
+}
+
+a.btn {
+    display: inline-block;
+    padding: 0.8em 1.5em;
+    background-color: #1a73e8;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+a.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Mejorar la presentación del equipo */
+.team-member {
+    margin-bottom: 2em;
+}
+
+.team-member h3 {
+    font-size: 1.8em;
+    color: #1a73e8;
+}
+
+.team-member p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Estilo de los planes de precios */
+.plan {
+    display: inline-block;
+    width: 30%;
+    padding: 2em;
+    margin: 1em;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.plan h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.plan p {
+    font-size: 1.2em;
+}
+
+.plan strong {
+    display: block;
+    font-size: 2.2em;
+    margin-bottom: 1em;
+}
+
+/* Sección de redes sociales y pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2em 0;
+    text-align: center;
+    margin-top: 3em;
+}
+
+footer .social p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+footer a {
+    color: white;
+    margin: 0 0.5em;
+    font-size: 1.5em;
+}
+
+footer a:hover {
+    color: #1a73e8;
+}
+
+/* Responsividad mejorada */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 1em;
+    }
+
+    .plan {
+        width: 100%;
+        margin: 1.5em 0;
+    }
+
+    section {
+        padding: 2em 1em;
+    }
+
+    .team-member {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+/* Footer Section */
+footer {
+    background-color: #ff7676;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer h2 {
+    color: white;
+}
+
+footer p {
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .featured-products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+
+    .contacto-formulario {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacto-formulario form, .contacto-info {
+        width: 100%;
+    }
+}
+
+/* Contacto - Mejora de accesibilidad en formulario */
+.contacto-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-titulo {
+    font-size: 2rem;
+    color: #0056b3;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contacto-formulario {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.contacto-formulario form {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-formulario input, .contacto-formulario textarea {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contacto-formulario input:focus, .contacto-formulario textarea:focus {
+    outline: 3px dashed #0056b3;
+    outline-offset: 3px;
+}
+
+.contacto-formulario button {
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contacto-formulario button:hover, .contacto-formulario button:focus {
+    background-color: #0056b3;
+}
+
+.contacto-info {
+    width: 30%;
+}
+
+.contacto-info p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Mejora en el mapa */
+.contacto-map-container {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 50px;
+}
+
+.contacto-map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer y Redes Sociales */
+.contacto-footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.contacto-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contacto-social-icons a img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Estilo del mapa mejorado */
+.map-container {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin-top: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
